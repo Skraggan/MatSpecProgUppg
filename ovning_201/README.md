@@ -53,11 +53,33 @@ print("Programmet avslutades normalt")
 
 Matriserna `A` och `B` ska kunna ges med valfritt antal rader och kolonner.
 
-Du kommer att behöva tillgång till antalet rader och kolonner i respektive matris. Dessa kan erhållas så här:
+Du kommer att behöva tillgång till antalet rader och kolonner i respektive matris. Dessa kan erhållas på två sätt:
 
 ```python
 antal_rader = A.shape[0] # Ger antaler rader i A
 antal_kolonner = A.shape[1] # Ger antalet kolonner i A
+# eller:
+antal_rader = len(A[:, 0]) # "Kolonnlängden"
+antal_kolonner = len(A[0]) # "Radlängden"
+```
+
+De senare alternativet ger en "dellista" som innehåller raderna respektive kolonnerna, antalet element i dessa listor (`len`) blir då antalet rader respektive kolonner. Ibland kan själva innehållet i dellistan vara intressant, nu vet ni hur det erhålls!
+
+En annan vanlig operation är att *transponera* matriser. Detta fungerar så här:
+
+```python
+import numpy as np
+A = np.array([[a11, a12], [a21, a22]])
+# A är nu
+# [[a11, a12],
+#  [a21, a22]]
+
+# Transponera nu A:
+A = A.T
+# A är nu
+# [[a11, a21],
+#  [a12, a22]]
+# dvs raderna blir kolonner och vice versa.
 ```
 
 ## Uppgift 201:2
