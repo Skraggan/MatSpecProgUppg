@@ -60,3 +60,13 @@ norm_u2 = round(np.linalg.norm(proj[:, 1]), 2)
 print(f"||u1|| = {norm_u1}")  # Blir 3.4
 print(f"||u2|| = {norm_u2}")  # Blir 1.21
  ```
+
+För att beräkna skalärprodukten av två vektorer, `u` och `v`, så kan du antingen skriva en egen rutin som gör det enligt definitionen, eller så kan du använda dig av funktionen `dot` som är definierad i `NumPy`. Denna användes så här:
+
+```
+import numpy as np
+u = np.array([1, 2, 3])
+v = np.array([-2, 3, -4])
+dot_product = np.dot(u, v)
+print(dot_product) # Skriver ut -8
+```
