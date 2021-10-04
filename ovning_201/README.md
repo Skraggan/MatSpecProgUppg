@@ -35,8 +35,8 @@ i, j = 2, 1  # Sökt index, rad och kolonn
 # Ändra inget under denna rad,
 # men ta gärna inspiration till det som
 # behöver skrivas i funktionen get_element.
-number_of_rows_in_A = len(A[:, 0])
-number_of_cols_in_B = len(B[0])
+number_of_rows_in_A = A.shape[0]
+number_of_cols_in_B = B.shape[1]
 
 if i <= number_of_rows_in_A and i > 0 and j <= number_of_cols_in_B and j > 0:
     c_ij = get_element(A, B, i, j)
