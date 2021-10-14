@@ -12,16 +12,36 @@ Den här uppgiften handlar om att beräkna projektionen för en vektor på godty
 
 Vi kom alltså tillbaka till samma vektor efter en utflykt med projektioner på andra koordinataxlar. Detta gäller alltid om de båda axlarna är vinkelräta.
 
-## Uppgiften
+## Uppgifterna
 
-Du ska skapa ett program där du anger en vektor, motsvarande y-vektorn i exemplet ovan, och två koordinataxlar som vektorer av typen `ndarray`. Programmet ska beräkna den ortogonala projektionen av vektorn y på respektive angiven koordinataxel.
+Målet är att skapa ett program där du anger en vektor, motsvarande y-vektorn i exemplet ovan, och två koordinataxlar som vektorer av typen `ndarray`. Programmet ska beräkna den ortogonala projektionen av vektorn y på respektive angiven koordinataxel.
+
+Eftersom formeln för att beräkna den ortogonala projektionen använder sig av skalärprodukt ska du börja med att skriva en funktion som tar emot två vektorer och returnerar deras skalära produkt.
 
 ### Test-exempel
 
-*Kodskelettet nedan arbetar med samma data som räkneexemplet ovan.*
+_Kodskelettet nedan arbetar med samma data som räkneexemplet ovan._
 
 ```python
 import numpy as np
+
+def dot_product(vec_1, vec_2)
+    '''
+    Parametrar:
+        vec_1: en vektor av typen ndarray
+        vec_2: en vektor av typen ndarray
+    Returvärde:
+        Om vektorerna går att multiplicera skalärt:
+            Skalärprodukten
+        Om vektorerna inte går att multiplicera skalärt:
+            None
+    Övrigt: Denna funktion bygger inte på NumPy:s implementering
+    av skalärprodukt.
+    '''
+    result = None
+    # Implementera koden nedan
+
+    return result
 
 def calc_proj(vektor, koord_axlar):
     '''
@@ -59,9 +79,9 @@ norm_u1 = round(np.linalg.norm(proj[:, 0]), 2)
 norm_u2 = round(np.linalg.norm(proj[:, 1]), 2)
 print(f"||u1|| = {norm_u1}")  # Blir 3.4
 print(f"||u2|| = {norm_u2}")  # Blir 1.21
- ```
+```
 
-För att beräkna skalärprodukten av två vektorer, `u` och `v`, så kan du antingen skriva en egen rutin som gör det enligt definitionen, eller så kan du använda dig av funktionen `dot` som är definierad i `NumPy`. Denna användes så här:
+Du ska som sagt skriva en egen funktion för att beräkna skalärprodukten av två vektorer, `u` och `v`, men för orienteringens skull visar jag även hur man kan använda sig av funktionen `dot` som är definierad i `NumPy`:
 
 ```
 import numpy as np
