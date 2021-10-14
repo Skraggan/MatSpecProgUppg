@@ -83,7 +83,7 @@ print(f"||u2|| = {norm_u2}")  # Blir 1.21
 
 Du ska som sagt skriva en egen funktion för att beräkna skalärprodukten av två vektorer, `u` och `v`, men för orienteringens skull visar jag även hur man kan använda sig av funktionen `dot` som är definierad i `NumPy`:
 
-```
+```python
 import numpy as np
 u = np.array([1, 2, 3])
 v = np.array([-2, 3, -4])
