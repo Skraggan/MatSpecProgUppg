@@ -25,7 +25,7 @@ _Kodskelettet nedan arbetar med samma data som räkneexemplet ovan._
 ```python
 import numpy as np
 
-def dot_product(vec_1, vec_2)
+def dot_product(vec_1, vec_2):
     '''
     Parametrar:
         vec_1: en vektor av typen ndarray
