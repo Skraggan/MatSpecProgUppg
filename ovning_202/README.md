@@ -1,4 +1,4 @@
-# Ortogonal projektion
+# Skalärprodukt och ortogonal projektion
 
 Redan i kursen Fysik 1 har du komposantuppdelat krafer längs med koordinataxalarna. En begränsning med beräkningarna där var att koordinataxlarna skulle bygga upp det "vanliga" koordinatsystemet, dvs en horisontell x-axel och en vertikal y-axel.
 
