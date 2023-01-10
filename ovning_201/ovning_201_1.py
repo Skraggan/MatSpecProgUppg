@@ -1,4 +1,5 @@
 import numpy as np
+from operator import mul
 
 def get_element(mat_A: np.ndarray, mat_B: np.ndarray, i: int, j: int) -> float:
     """
@@ -14,7 +15,7 @@ def get_element(mat_A: np.ndarray, mat_B: np.ndarray, i: int, j: int) -> float:
     if mat_A.shape[1] != mat_B.shape[0]:  
         return None 
     
-    c_ij = sum(map(lambda a, b: a*b, mat_A[i-1,:], mat_B[:,j-1]))
+    c_ij = sum(map(mul, mat_A[i-1,:], mat_B[:,j-1]))
     return c_ij
 
 # Ingångsvärden, kan förändras
